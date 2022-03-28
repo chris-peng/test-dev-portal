@@ -155,7 +155,7 @@ paths:
       operationId: post-products-prodId
       responses:
         '200':
-          description: OK
+          description: '{"success":true}'
           content:
             application/json:
               schema:
@@ -164,6 +164,10 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties: {}
+          application/xml:
             schema:
               type: object
               properties: {}
