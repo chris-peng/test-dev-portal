@@ -143,63 +143,6 @@ paths:
                   dateOfBirth: '1996-08-24'
         description: Post the necessary fields for the API to create a new user.
       description: Create a new user.
-  '/products/{prodId}':
-    parameters:
-      - schema:
-          type: string
-        name: prodId
-        in: path
-        required: true
-        description: product id
-    post:
-      summary: ''
-      operationId: post-products-prodId
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                description: ''
-                type: object
-                properties:
-                  success:
-                    type: boolean
-                required:
-                  - success
-                x-examples:
-                  example-1:
-                    success: true
-            application/xml:
-              schema:
-                type: object
-                properties: {}
-            multipart/form-data:
-              schema:
-                type: object
-                properties: {}
-              examples: {}
-            text/html:
-              schema:
-                type: object
-                properties: {}
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-          application/xml:
-            schema:
-              type: object
-              properties: {}
-        description: '{"name":"prod1"}'
-      description: create a product
-      parameters:
-        - schema:
-            type: number
-          in: query
-          name: creator
-          description: creator id
 components:
   schemas:
     User:
