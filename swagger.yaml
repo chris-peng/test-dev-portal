@@ -318,7 +318,7 @@ paths:
       responses:
         default:
           description: successful operation
-  /ccc/ddd:
+  /ccc/ddd2:
     post:
       summary: ''
       operationId: post-ccc-ddd
@@ -326,6 +326,7 @@ paths:
         '200':
           description: OK
       description: sdfasdfasdfasdf
+    parameters: []
   '/ux/create/{id}':
     post:
       summary: ''
