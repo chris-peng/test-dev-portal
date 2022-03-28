@@ -150,6 +150,7 @@ paths:
         name: prodId
         in: path
         required: true
+        description: product id
     post:
       summary: ''
       operationId: post-products-prodId
@@ -166,12 +167,18 @@ paths:
           application/json:
             schema:
               type: object
-              properties: {}
           application/xml:
             schema:
               type: object
               properties: {}
         description: '{"name":"prod1"}'
+      description: create a product
+      parameters:
+        - schema:
+            type: number
+          in: query
+          name: creator
+          description: creator id
 components:
   schemas:
     User:
