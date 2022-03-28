@@ -89,6 +89,26 @@ paths:
                   lastName: Baker
                   dateOfBirth: '1985-10-02'
         description: Patch user properties to update.
+    delete:
+      summary: ''
+      operationId: delete-users-userId
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                required:
+                  - success
+                x-examples:
+                  example-1:
+                    success: true
+      description: delete user
   /user:
     post:
       summary: Create New User
