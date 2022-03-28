@@ -156,9 +156,30 @@ paths:
       operationId: post-products-prodId
       responses:
         '200':
-          description: '{"success":true}'
+          description: ''
           content:
             application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                required:
+                  - success
+                x-examples:
+                  example-1:
+                    success: true
+            application/xml:
+              schema:
+                type: object
+                properties: {}
+            multipart/form-data:
+              schema:
+                type: object
+                properties: {}
+              examples: {}
+            text/html:
               schema:
                 type: object
                 properties: {}
