@@ -326,6 +326,32 @@ paths:
         '200':
           description: OK
       description: sdfasdfasdfasdf
+  '/ux/create/{id}':
+    post:
+      summary: ''
+      operationId: post-ux-create
+      responses:
+        '200':
+          description: OK
+        '':
+          description: '{"success":true}'
+      description: create a template
+      parameters:
+        - type: string
+          in: header
+          name: Authorization
+          description: token
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties: {}
+          description: '{"name":""}'
+    parameters:
+      - type: string
+        name: id
+        in: path
+        required: true
 securityDefinitions:
   api_key:
     type: apiKey
